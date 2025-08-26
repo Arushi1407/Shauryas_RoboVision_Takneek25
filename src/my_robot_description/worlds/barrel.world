@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="default">
+    <!-- Ground and Sun -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Traffic Barrel -->
+    <model name="traffic_barrel">
+      <static>false</static>
+      <pose>0 0 0 0 0 0</pose>
+      <link name="barrel_link">
+
+        <!-- Base Cylinder -->
+        <collision name="base_collision">
+          <pose>0 0 0.15 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.35</radius>
+              <length>0.3</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="base_visual">
+          <pose>0 0 0.15 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.35</radius>
+              <length>0.3</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>1 0.4 0 1</ambient>
+            <diffuse>1 0.4 0 1</diffuse>
+          </material>
+        </visual>
+
+        <!-- Middle Cylinder -->
+        <collision name="mid_collision">
+          <pose>0 0 0.45 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.3</radius>
+              <length>0.3</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="mid_visual">
+          <pose>0 0 0.45 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.3</radius>
+              <length>0.3</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>1 0.4 0 1</ambient>
+            <diffuse>1 0.4 0 1</diffuse>
+          </material>
+        </visual>
+
+        <!-- Top Cylinder -->
+        <collision name="top_collision">
+          <pose>0 0 0.75 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.25</radius>
+              <length>0.3</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="top_visual">
+          <pose>0 0 0.75 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.25</radius>
+              <length>0.3</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>1 0.4 0 1</ambient>
+            <diffuse>1 0.4 0 1</diffuse>
+          </material>
+        </visual>
+
+        <!-- Black Stripes -->
+        <visual name="stripe1">
+          <pose>0 0 0.15 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.36</radius>
+              <length>0.05</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+
+        <visual name="stripe2">
+          <pose>0 0 0.45 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.31</radius>
+              <length>0.05</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+
+        <visual name="stripe3">
+          <pose>0 0 0.75 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.26</radius>
+              <length>0.05</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+
+      </link>
+    </model>
+  </world>
+</sdf>
